@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.springMybatisDemo.mapper.UserMapper">
+    <!--User add(int id);-->
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into user(username, password) values (#{username}, #{password})
+    </insert>
+    <!--User selectUser(String username);-->
+    <select id="selectUser" resultType="com.example.springMybatisDemo.model.User">
+        select * from user where username=#{username}
+    </select>
+    <!--User deleteUser(String username);-->
+    <delete id="deleteUser">
+        delete from user where username=#{username}
+    </delete>
+</mapper>
