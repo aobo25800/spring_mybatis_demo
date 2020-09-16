@@ -9,7 +9,7 @@
     <select id="selectUser" resultType="com.example.springMybatisDemo.model.User">
         select * from user where username=#{username}
     </select>
-    <!--User deleteUser(String username);-->
+    <!--User deleteUser(String user);-->
     <delete id="deleteUser">
         delete from user where username=#{username}
     </delete>
